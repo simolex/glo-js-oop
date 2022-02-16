@@ -14,12 +14,9 @@ const DomElement = function (selector) {
 DomElement.prototype.createElement = function () {
   const typeSelector = this.selector[0];
   const attrValue = this.selector.substring(1);
-  console.log(attrValue);
-
   switch (typeSelector) {
     case ".":
       this.element = document.createElement("div");
-
       attrValue != "" && this.element.classList.add(attrValue);
       break;
     case "#":
